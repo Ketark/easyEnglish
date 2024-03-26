@@ -8,6 +8,7 @@ const path = require("path");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 
+const deckRouter = require("./routes/deck.router");
 const getTime = require("./middlewares/getTime");
 const checkDbConnection = require("./middlewares/dbCheck");
 const { secureRout, checkUser } = require("./middlewares/common");
@@ -35,6 +36,7 @@ app.use(getTime);
 // app.use(checkDbConnection);
 app.use(session(sessionConfig));
 
+app.use("/decks", deckRouter);
 app.get("/", async (req, res) => {
   res.send("work");
 });

@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+  }
+
+.deckContainer, .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+  flex: initial;
+  position: relative;
+  height: 52rem;
+  width: 48rem;
+  -moz-perspective: 200rem;
+  perspective: 200rem;
+  margin: 2rem;
+
+  &__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden; /* We don't want to see the back part of the element. */
+    backface-visibility: hidden; /* We don't want to see the back part of the element. */
+    border-radius: 3px;
+    overflow: hidden; /* The image is overflowing the parent. */
+    box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
+  
+    &--front {
+     background-image: linear-gradient(
+       to right bottom,
+       rgba($color-primary-dark, 0.65),
+       rgba($color-primary-light, 0.7)
+      ),
+
+      url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+    }
+    &--back {
+      background-color: $color-white;
+      transform: rotateY(180deg);
+     }
+    }
+  }
