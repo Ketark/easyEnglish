@@ -1,7 +1,8 @@
 const React = require('react');
+const Navbar = require('./Navbar');
 
 
-module.exports = function Layout ({ children }){
+module.exports = function Layout ({ children, login }){
 return(
 <html lang="en">
 <head>
@@ -14,10 +15,8 @@ return(
     <title>Easy English</title>
 </head>
 <body>
-<h1>Выучить английские слова - легко!</h1>
-
+<Navbar login={login} />
 {children}
-
 </body>
 </html>
 );
