@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         console.log(err);
         res.redirect('/');
       } else {
-        res.clearCookie('solo');
+        res.clearCookie('cookieName');
         res.redirect('/');
       }
     });

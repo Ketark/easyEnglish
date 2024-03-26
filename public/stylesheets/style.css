@@ -1,14 +1,13 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-  }
-
-.deckContainer, .cardContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.deckContainer,
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -32,19 +31,18 @@
     border-radius: 3px;
     overflow: hidden; /* The image is overflowing the parent. */
     box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
-  
-    &--front {
-     background-image: linear-gradient(
-       to right bottom,
-       rgba($color-primary-dark, 0.65),
-       rgba($color-primary-light, 0.7)
-      ),
 
-      url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+    &--front {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-dark, 0.65),
+          rgba($color-primary-light, 0.7)
+        ),
+        url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
     }
     &--back {
       background-color: $color-white;
       transform: rotateY(180deg);
-     }
     }
   }
+}
