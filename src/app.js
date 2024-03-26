@@ -15,6 +15,11 @@ const { secureRout, checkUser } = require("./middlewares/common");
 const app = express();
 const { PORT, SESSION_SECRET } = process.env;
 
+const HomeRouter = require('./routes/home.router');
+const RegRouter = require('./routes/registration.router');
+const LogRouter = require('./routes/login.router');
+const LogoutRouter = require('./routes/logout.router');
+
 const sessionConfig = {
   name: "cookieName",
   store: new FileStore(),
@@ -35,9 +40,10 @@ app.use(getTime);
 // app.use(checkDbConnection);
 app.use(session(sessionConfig));
 
-app.get("/", async (req, res) => {
-  res.send("work");
-});
+app.use('/register', RegRouter);
+app.use('/logout', LogoutRouter);
+app.use('/login', LogRouter);
+app.use('/', HomeRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);
