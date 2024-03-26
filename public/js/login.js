@@ -25,7 +25,7 @@ form.addEventListener('submit', async (e) => {
         msg.style.color = 'green';
         setTimeout(() => {
           window.location.href = '/decks';
-        }, 300);
+        }, 1000);
       }
     } catch (error) {
       console.log('Ошибка авторизации=>', error);

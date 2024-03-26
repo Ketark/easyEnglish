@@ -6,6 +6,7 @@ const { User, Deck, Card } = require("../../db/models");
 
 deckRouter.get("/", async (req, res) => {
   try {
+    const { login } = req.session;
     const decks = await Deck.findAll({
       include: [
         {
@@ -14,7 +15,7 @@ deckRouter.get("/", async (req, res) => {
       ],
     });
 
-    renderTemplate(Decks, { decks }, res);
+    renderTemplate(Decks, { login, decks }, res);
   } catch (error) {
     console.log("Ошибка вывода колод", error);
   }
@@ -22,9 +23,10 @@ deckRouter.get("/", async (req, res) => {
 
 deckRouter.get("/:id", async (req, res) => {
   try {
+    const { login } = req.session;
     const cards = await Card.findAll({ where: { deck_id: req.params.id } });
 
-    renderTemplate(DeckPage, { cards }, res);
+    renderTemplate(DeckPage, { login, cards }, res);
   } catch (error) {
     console.log("Ошибка вывода карт", error);
   }

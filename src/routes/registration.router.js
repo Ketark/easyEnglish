@@ -1,20 +1,20 @@
-const express = require('express');
-const bcrypt = require('bcrypt');
-const { User } = require('../../db/models');
-const renderTemplate = require('../utils/renderTemplate');
-const Registration = require('../views/Registration');
+const express = require("express");
+const bcrypt = require("bcrypt");
+const { User } = require("../../db/models");
+const renderTemplate = require("../utils/renderTemplate");
+const Registration = require("../views/Registration");
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   renderTemplate(Registration, {}, res);
 });
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { login, email, password, password2 } = req.body;
     if (password !== password2) {
-      res.json({ err: 'Пароли не совпадают' });
+      res.json({ err: "Пароли не совпадают" });
     }
     const emails = await User.findOne({ where: { email } });
     const user = await User.findOne({ where: { login } });
@@ -27,10 +27,11 @@ router.post('/', async (req, res) => {
       const newUser = await User.create({
         login,
         password: hash,
+        email,
       });
       req.session.login = newUser.login;
       req.session.save(() => {
-        res.json('Регистрация прошла успешно');
+        res.json({ msg: "Регистрация прошла успешно" });
       });
     }
   } catch (error) {

@@ -21,7 +21,7 @@ function Registration() {
           </div>
           <div className="form-group">
             <label htmlFor="password">Повторите пароль:</label>
-            <input type="password" id="password2" name="password" placeholder="Введите ваш пароль" required />
+            <input type="password" id="password2" name="password2" placeholder="Введите ваш пароль" required />
           </div>
           <button type="submit" className="login-button">Зарегистрироваться</button>
           <div className="regMsg"><br /></div>
