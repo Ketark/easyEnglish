@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function Registration() {
   return (
     <Layout>
-      <div className="login-container">
+      <div className="reg-container">
         <h3>Введите свои данные:</h3>
         <form id="regForm" action="/register" method="POST">
           <div className="form-group">
