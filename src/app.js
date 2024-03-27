@@ -20,6 +20,7 @@ const HomeRouter = require('./routes/home.router');
 const RegRouter = require('./routes/registration.router');
 const LogRouter = require('./routes/login.router');
 const LogoutRouter = require('./routes/logout.router');
+const profileRouter = require('./routes/profileRouters');
 
 const sessionConfig = {
   name: "cookieName",
@@ -41,7 +42,7 @@ app.use(getTime);
 // app.use(checkDbConnection);
 app.use(session(sessionConfig));
 
-
+app.use("/profile", profileRouter);
 app.use("/decks", deckRouter);
 app.use('/register', RegRouter);
 app.use('/logout', LogoutRouter);
