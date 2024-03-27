@@ -12,25 +12,25 @@ module.exports = function Profile({ decks, progress, login }) {
           </div>
         ))}
       </div>
-      <h1>Создать новую карточку:</h1>
-      <form id="addWordForm">
-        <h3>Выберете категорию:</h3>
-        <select name="name">
-          <option></option>
-          {decks.map((deck) => (
-            <option>{deck.name}</option>
-          ))}
-        </select>
-        <h3>Введите слово на английском:</h3>
-        <input type="text" name="enWord" />
-        <h3>Введите слово на русском:</h3>
-        <input type="text" name="ruWord" />
-        <br />
-        <button type="submit" id="addWord">
-          Добавить
-        </button>
-        <div id="messageAddWord"></div>
-      </form>
+        <h1>Создать новую карточку:</h1>
+        <form id="addWordForm">
+          <h3>Выберете категорию:</h3>
+          <select name="name">
+            <option></option>
+            {decks.map((deck) => (
+              <option>{deck.name}</option>
+            ))}
+          </select>
+          <h3>Введите слово на английском:</h3>
+          <input type="text" name="enWord" />
+          <h3>Введите слово на русском:</h3>
+          <input type="text" name="ruWord" />
+          <br />
+          <button type="submit" id="addWord">
+            Добавить
+          </button>
+          <div id="messageAddWord"></div>
+        </form>
       <script defer src="/js/profile.js" />
     </Layout>
   );

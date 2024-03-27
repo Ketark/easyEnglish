@@ -13,7 +13,7 @@ function Registration() {
           </div>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Введите ваш логин" required />
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required />
           </div>
           <div className="form-group">
             <label htmlFor="password">Пароль:</label>

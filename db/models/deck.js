@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   Deck.init(
     {
       name: DataTypes.STRING,
+      cover: DataTypes.STRING,
     },
     {
       sequelize,
