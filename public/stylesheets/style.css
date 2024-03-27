@@ -1,11 +1,241 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+
+  }
+
+  body {
+    background-image: url('/assets/background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Philosopher', sans-serif;
+  }
+
+  /* НАВБАР ----------------------------- */
+
+  .navbar {
+    background-color: #FFC0CB;
+    padding: 10px 0;
+  }
+  
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo {
+    text-decoration: none;
+    color: #FF69B4;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  
+  .navbar .logo span {
+    color: #FF69B4;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .nav-links li a {
+    color: #FF69B4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .navbar .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links div {
+    display: flex;
+    align-items: center;
+  }
+
+  .center-text {
+    margin-left: 250px;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .navbar .nav-links a {
+    color: #050505; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: #f9e46d; 
+    border: 3px solid #000;
+    margin-right: 20px;
+  }
+  
+  .navbar .nav-links a:hover {
+    background-color: #FF69B4; 
+    color: #FFF; 
+    border: 3px solid #000;
+  }
+
+  /* ЛОГИН + REG--------------------------------------------- */
+
+  .login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .reg-container {
+    max-width: 400px;
+    margin: 70px auto;
+    padding: 20px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF69B4;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #FF1493;
+  }
+  
+  .logMsg {
+    text-align: center;
+  }
+  
+  .alog {
+    color: #FF69B4;
+    text-decoration: none;
+  }
+  
+  .alog:hover {
+    text-decoration: underline;
+  }
+
+  /* Home ---------------------------------------------------- */
+
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+  }
+  
+  .welcome-box {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .welcome-text-container {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .welcome-heading {
+    font-size: 36px;
+    color: #FF69B4;
+  }
+  
+  .welcome-text {
+    font-size: 18px;
+    color: #050505;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .welcome-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #FF69B4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .welcome-button:hover {
+    background-color: #FFC0CB;
+  }
+
+  /* ---------------------------------------------------------- */
+
+.deckContainer,
+.cardContainer {
+=======
 }
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
 .cardsContainer{
   font-family: 'Calligraffitti', cursive;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

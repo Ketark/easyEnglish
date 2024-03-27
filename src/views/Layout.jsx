@@ -12,6 +12,8 @@ return(
     
     <link rel="stylesheet" href="/stylesheets/normalize.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet" />  
     <title>Easy English</title>
 </head>
 <body>

@@ -4,9 +4,16 @@ const Layout = require('./Layout');
 function Home({ title }) {
   return (
     <Layout title={title}>
-     <div className="welcome-container">
+      <div className="welcome-container">
         <div className="welcome-box">
-          <h2>Привет! <a href="/register">Зарегистрируйтесь</a> или <a href="/login">войдите</a>.</h2>
+          <div className="welcome-text-container">
+            <h2 className="welcome-heading">Привет!</h2>
+            <p className="welcome-text">Зарегистрируйтесь или войдите, чтобы начать учить слова.</p>
+            <div className="welcome-buttons">
+              <a href="/register" className="welcome-button">Зарегистрироваться</a>
+              <a href="/login" className="welcome-button">Войти</a>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
