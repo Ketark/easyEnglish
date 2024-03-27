@@ -4,18 +4,18 @@ const Layout = require('../Layout');
 module.exports = function DeckPage({ login, cards, deck }) {
 return(
     <Layout login={login}>
-        <h1>{deck.name} </h1>
+        <h2 className="animate">{deck.name} </h2>
         <div className="cardsContainer">
         {cards.map((card) => 
         <div className="flip-card">
          <div className="flip-card-inner">  
          <div className="flip-card-front">
-           <h1>{card.enWord}</h1>
+           <h2>{card.enWord}</h2>
            <button className="learnFrontCard" id={card.id}>Изучено</button>
          </div>
          
          <div className="flip-card-back">
-           <h1>{card.ruWord}</h1>
+           <h2>{card.ruWord}</h2>
            <button className="learnBackCard" id={card.id}>Изучено</button>
          </div>    
          </div>
