@@ -3,46 +3,73 @@
   padding: 0;
   box-sizing: border-box;
 }
-.deckContainer,
-.cardContainer {
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
+.cardsContainer{
+  font-family: 'Calligraffitti', cursive;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
 }
 
-.card {
-  flex: initial;
+.flip-card {
+  
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
   position: relative;
-  height: 52rem;
-  width: 48rem;
-  -moz-perspective: 200rem;
-  perspective: 200rem;
-  margin: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-  &__side {
-    height: 52rem;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden; /* We don't want to see the back part of the element. */
-    backface-visibility: hidden; /* We don't want to see the back part of the element. */
-    border-radius: 3px;
-    overflow: hidden; /* The image is overflowing the parent. */
-    box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
 
-    &--front {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba($color-primary-dark, 0.65),
-          rgba($color-primary-light, 0.7)
-        ),
-        url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
-    }
-    &--back {
-      background-color: $color-white;
-      transform: rotateY(180deg);
-    }
-  }
+.flip-card-inner.active {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  
+  background: url('https://plus.unsplash.com/premium_photo-1681433300663-96803730fee1?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') ;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: url('https://images.unsplash.com/photo-1575050312925-f0d7757591eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8eWVsbG93JTIwcGlua3xlbnwwfHwwfHx8MA%3D%3D') ;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.deckContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+a>img{
+  width: 300px;
+  height: 500px;
 }

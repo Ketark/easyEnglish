@@ -1,19 +1,27 @@
 const React = require('react');
 const Layout = require('../Layout');
 
-module.exports = function DeckPage({ login, cards }) {
+module.exports = function DeckPage({ login, cards, deck }) {
 return(
     <Layout login={login}>
-        {/* <h1>Здесь будет название колоды </h1> */}
-        <div className="card__side card__side--front">
+        <h1>{deck.name} </h1>
+        <div className="cardsContainer">
         {cards.map((card) => 
-         <div className="card__theme">
-         <div className="card__theme-box" key={card.id} id={card.id}>
-         <p className="card__title">{card.enWord}</p>
+        <div className="flip-card">
+         <div className="flip-card-inner">  
+         <div className="flip-card-front">
+           <h1>{card.enWord}</h1>
+           <button className="learnFrontCard" id={card.id}>Изучено</button>
          </div>
-         <button id={card.id}> Изучено </button>
-        </div>)}
-        </div>
+         
+         <div className="flip-card-back">
+           <h1>{card.ruWord}</h1>
+           <button className="learnBackCard" id={card.id}>Изучено</button>
+         </div>    
+         </div>
+       </div>)}
+       </div>
+       <script defer src="/js/card.js" />
     </Layout>
 )
 };
