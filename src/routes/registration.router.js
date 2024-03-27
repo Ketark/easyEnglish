@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
         email,
       });
       req.session.login = newUser.login;
+      req.session.userId = newUser.id;
       req.session.save(() => {
         res.json({ msg: "Регистрация прошла успешно" });
       });
