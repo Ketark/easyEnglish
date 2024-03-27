@@ -11,7 +11,7 @@ return(
         <div className="deckOne" key={deck.id} id={deck.id}>
 
         <a href={`/decks/${deck.id}`}> <h2>{deck.name}</h2><img src={deck.cover} alt="photo" />
-       </a>
+       
         
         </div>)}
         </div>
