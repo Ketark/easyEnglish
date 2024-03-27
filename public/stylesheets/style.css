@@ -228,6 +228,86 @@
 
   /* ---------------------------------------------------------- */
 
+  /*  ЛИЧНЫЙ КАБИНЕТ -------------------------------------------- */
+
+  .profile-container {
+    display: flex !important;
+    justify-content: space-around;
+    margin-top: 50px;
+    vertical-align: middle;
+  }
+  
+  .progress-section {
+    /* max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    flex: 1; 
+    margin-right: 20px;  */
+  }
+
+  progress {
+    width: 400px;
+    height: 50px;
+    margin: 10px;
+    vertical-align: middle;
+    /* display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    margin: 0 */
+  }
+  
+  .create-card-section {
+    flex: 1; 
+    text-align: center;
+    max-width: 500px;
+  }
+
+  #categories {
+    max-width: 100px; 
+    margin: 50px;
+  }
+
+  #addWordForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #addWordForm h3 {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  #addWordForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+  }
+  
+  #addWordForm button {
+    padding: 10px 20px;
+    background-color: #FF69B4;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #messageAddWord {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+  }
+
+  /* ------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
 .cardsContainer{
   font-family: 'Calligraffitti', cursive;
