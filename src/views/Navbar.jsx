@@ -17,10 +17,10 @@ function Navbar({ login }) {
             </>
           ) : (
             <>
-              <li><a href="/login" ><img  src="/assets/sign-in.png" alt="easyEnglish" style={{ paddingRight: '5px', marginTop:'0px', verticalAlign: 'middle' }} />
+              <li><a href="/login" ><img  src="/assets/sign-in.png" alt="easyEnglish" style={{ paddingRight: '5px', marginTop:'0px', verticalAlign: 'middle', height: '24px', width: '24px' }} />
               <span style={{ verticalAlign: 'middle' }}>Войти</span>
               </a></li>
-              <li><a href="/register"><img  src="/assets/reg.png" alt="easyEnglish" style={{ paddingRight: '5px', marginTop:'0px', verticalAlign: 'middle' }} />
+              <li><a href="/register"><img  src="/assets/reg.png" alt="easyEnglish" style={{ paddingRight: '5px', marginTop:'0px', verticalAlign: 'middle', height: '24px', width: '24px' }} />
               <span style={{ verticalAlign: 'middle' }}>Регистрация</span>
                 </a></li>
             </>
