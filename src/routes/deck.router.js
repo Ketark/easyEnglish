@@ -26,7 +26,10 @@ deckRouter.get("/:id", async (req, res) => {
     const { login } = req.session;
     const cards = await Card.findAll({ where: { deck_id: req.params.id } });
 
-    renderTemplate(DeckPage, { login, cards }, res);
+    const deck = await Deck.findOne({ where: { id: req.params.id } });
+
+
+    renderTemplate(DeckPage, { login, cards, deck }, res);
   } catch (error) {
     console.log("Ошибка вывода карт", error);
   }
