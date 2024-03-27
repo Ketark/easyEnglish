@@ -23,6 +23,13 @@ module.exports = {
           key: "id",
         },
       },
+      deck_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Decks",
+          key: "id",
+        },
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
