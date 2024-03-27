@@ -28,16 +28,14 @@ addWordForm.addEventListener("submit", async (e) => {
       const decks = await responsePut.json();
       console.log(decks);
       const category = document.getElementById("categories");
-      category.innerHTML = `
-      ${decks.map(
-        (deck) => `
-        <div key=${deck.id}>
-          ${deck.name}: <progress max="100" value=${deck.done}></progress>
-        </div>`
-      )}
-      `;
+      category.innerHTML = "";
+      decks.forEach((deck) => {
+        const string = document.createElement('div');
+        string.innerHTML = `${deck.name}: <progress max="100" value=${deck.done}></progress>`;
+        string.setAttribute('key', deck.id);
+        category.appendChild(string);
+      });
     }
-    console.log("!!!");
   } catch (error) {
     console.log("Ошибка добавления карточки", error);
   }
