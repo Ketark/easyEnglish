@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
       const match = await bcrypt.compare(password, user.password);
       if (match) {
         req.session.login = user.login;
+        req.session.userId = user.id;
         req.session.save(() => {
           res.json({
             text: 'Авторизация прошла успешно',

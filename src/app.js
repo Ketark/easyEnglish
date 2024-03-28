@@ -42,12 +42,12 @@ app.use(getTime);
 // app.use(checkDbConnection);
 app.use(session(sessionConfig));
 
-app.use("/profile", profileRouter);
-app.use("/decks", deckRouter);
-app.use('/register', RegRouter);
+app.use("/profile", checkUser, profileRouter);
+app.use("/decks", checkUser, deckRouter);
+app.use('/register', secureRout, RegRouter);
 app.use('/logout', LogoutRouter);
-app.use('/login', LogRouter);
-app.use('/', HomeRouter);
+app.use('/login', secureRout, LogRouter);
+app.use('/', secureRout, HomeRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);

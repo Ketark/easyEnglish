@@ -1,5 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
+const mailer = require("../nodemailer");
 const { User } = require("../../db/models");
 const renderTemplate = require("../utils/renderTemplate");
 const Registration = require("../views/Registration");
@@ -29,6 +30,16 @@ router.post("/", async (req, res) => {
         password: hash,
         email,
       });
+      const message = {
+        to: req.body.email,
+        subject: "Поздравляем с успешной регистрацией!",
+        text: `Поздравляем с успешной регистрацией!
+        данные вашей учетной записи:
+        login:${req.body.login}
+        Данное письмо не требует ответа.
+        `,
+      };
+      mailer(message);
       req.session.login = newUser.login;
       req.session.userId = newUser.id;
       req.session.save(() => {

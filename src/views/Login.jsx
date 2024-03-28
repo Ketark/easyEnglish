@@ -21,7 +21,7 @@ function Login() {
           <div className="logMsg">
             <div className="yet">
               Еще нет аккаунта?
-              <a className="alog" href="/register">Зарегистрируйтесь!</a>
+              <a className="alog" href="/register"> Зарегистрируйтесь!</a>
             </div>
           </div>
         </form>

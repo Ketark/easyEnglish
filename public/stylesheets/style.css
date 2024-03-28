@@ -16,97 +16,109 @@ body {
   padding: 10px 0;
 }
 
-  .navbar {
-    background-color: #FFC0CB;
-    padding: 10px 0;
-  }
-  
-  .navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navbar .logo {
-    text-decoration: none;
-    color: #FFC0CB;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .logo img {
-    width: 70px;
-    height: auto;
-    margin-right: 10px;
-    margin-left: 20px;
-  }
-  
-  .navbar .logo span {
-    color: #FFC0CB;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  .nav-links li a {
-    color: #FFC0CB;
-    text-decoration: none;
-    font-weight: bold;
-  }
+.navbar {
+  background-color: #ffc0cb;
+  padding: 10px 0;
+}
 
-  .navbar .nav-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar .nav-links div {
-    display: flex;
-    align-items: center;
-  }
-
-  .center-text {
-    margin-left: 250px;
-  }
-  
-  .navbar .nav-links li {
-    margin: 0 10px;
-  }
-  
-  .navbar .nav-links a {
-    color: #050505; 
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    background-color: #f9e46d; 
-    border: 3px solid #000;
-    margin-right: 20px;
-  }
-
-  /* ЛОГИН + REG--------------------------------------------- */
-
-  .login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-
+.navbar .container {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  color: #ffc0cb;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 70px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.navbar .logo span {
+  color: #ffc0cb;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  color: #ffc0cb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links div {
+  display: flex;
+  align-items: center;
+}
+
+.center-text {
+  margin-left: 250px;
+}
+
+.navbar .nav-links li {
+  margin: 0 10px;
+}
+
+.navbar .nav-links a {
+  color: #050505;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: #f9e46d;
+  border: 3px solid #000;
+  margin-right: 20px;
+}
+
+/* ЛОГИН + REG--------------------------------------------- */
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reg-container {
+  max-width: 400px;
+  margin: 70px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
@@ -177,12 +189,6 @@ body {
   margin-right: 20px;
 }
 
-.navbar .nav-links a:hover {
-  background-color: #ff69b4;
-  color: #fff;
-  border: 3px solid #000;
-}
-
 /* ЛОГИН + REG--------------------------------------------- */
 
 .login-container {
@@ -194,207 +200,269 @@ body {
   justify-content: center;
   align-items: center;
 
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f9e46d;
-    border: 3px solid #000;
-    color: #000;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #FFC0CB;
-  }
-  
-  .logMsg {
-    text-align: center;
-  }
-  
-  .alog {
-    color: #FFC0CB;
-    text-decoration: none;
-  }
-  
-  .alog:hover {
-    text-decoration: underline;
-  }
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  /* Home ---------------------------------------------------- */
+.form-group {
+  margin-bottom: 20px;
+}
 
-  .welcome-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px auto;
-  }
-  
-  .welcome-box {
-    background-color: #FFF;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .welcome-text-container {
-    background-color: #FFF;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .welcome-heading {
-    font-size: 36px;
-    color: #000000;
-  }
-  
-  .welcome-text {
-    font-size: 18px;
-    color: #050505;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-buttons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .welcome-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #f9e46d;
-    border: 3px solid #000;
-    color: #000;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .welcome-button:hover {
-    background-color: #FFC0CB;
-  }
+label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
-  /* ---------------------------------------------------------- */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  /*  ЛИЧНЫЙ КАБИНЕТ -------------------------------------------- */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9e46d;
+  border: 3px solid #000;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .profile-container {
-    display: flex !important;
-    justify-content: space-around;
-    margin-top: 50px;
-    vertical-align: middle;
-  }
-  
-  .progress-section {
-    /* max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    align-items: center;
-    flex: 1; 
-    margin-right: 20px;  */
+.login-button:hover {
+  background-color: #ffc0cb;
+}
+
+.logMsg {
+  text-align: center;
+}
+
+.alog {
+  color: #000;
+  text-decoration: none;
+}
+
+.alog:hover {
+  color: #ffc0cb;
+}
+
+/* Home ---------------------------------------------------- */
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.welcome-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.welcome-text-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.welcome-heading {
+  font-size: 36px;
+  color: #000000;
+}
+
+.welcome-text {
+  font-size: 18px;
+  color: #050505;
+  margin-bottom: 20px;
+}
+
+.welcome-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f9e46d;
+  border: 3px solid #000;
+  color: #000;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.welcome-button:hover {
+  background-color: #ffc0cb;
+}
+
+/* ---------------------------------------------------------- */
+
+/*  ЛИЧНЫЙ КАБИНЕТ -------------------------------------------- */
+
+.categoryOne {
+  width: 500px;
+}
+
+.progress-section {
+  width: 600px;
+}
+
+.profile-container {
+  display: flex !important;
+  justify-content: space-around;
+  margin-top: 50px;
+  vertical-align: middle;
 }
 
 progress {
+  border-radius: 25px;
+  overflow: hidden;
   width: 400px;
-  height: 50px;
+  height: 30px;
   margin: 10px;
+  appearance: none;
   vertical-align: middle;
-  /* display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    margin: 0 */
+  animation: progressAnimation 2s ease-in-out forwards;
+}
 
-  }
-  
-  .create-card-section {
-    flex: 1; 
-    text-align: center;
-    max-width: 500px;
-  }
+progress::-webkit-progress-bar {
+  background-color: white;
+}
 
-  #categories {
-    max-width: 100px; 
-    margin: 50px;
-  }
+progress::-webkit-progress-value {
+  background-color: #fd9dad;
+}
 
-  #addWordForm {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #FFF;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@keyframes progressAnimation {
+  from {
+    width: 0; /* Начальная ширина 0 */
   }
-  
-  #addWordForm h3 {
-    margin-top: 10px;
-    text-align: center;
+  to {
+    width: 300px; /* Конечная ширина 100% */
   }
-  
-  #addWordForm input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-  }
-  
-  #addWordForm button {
-    padding: 10px 20px;
-    background-color: #f9e46d;
-    border: 3px solid #000;
-    color: #000;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+}
 
-  #addWordForm button:hover {
-    background-color: #FFC0CB;
-  }
-  
-  #messageAddWord {
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
-  }
+.create-card-section {
+  flex: 1;
+  text-align: center;
+  max-width: 500px;
+}
 
-  /* ------------------------------------------------------------- */
+#categories {
+  max-width: 100px;
+  margin: 50px;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
-.cardsContainer{
-  font-family: 'Calligraffitti', cursive;
+#addWordForm {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#addWordForm h3 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#addWordForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#addWordForm button {
+  padding: 10px 20px;
+  background-color: #f9e46d;
+  border: 3px solid #000;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addWordForm button:hover {
+  background-color: #ffc0cb;
+}
+
+#messageAddWord {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap");
+
+.categoryTitle {
+  text-decoration: none;
+  text-align: center;
+  background-image: linear-gradient(
+    -25deg,
+    #231557 70%,
+    #44107a 70%,
+    #ff1361 30%,
+    #d8d101 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+
+  color: #fff;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.backCategory {
+  text-decoration: none;
+  text-align: center;
+  background-image: linear-gradient(
+    -25deg,
+    #231557 0%,
+    #44107a 0%,
+    #ff1361 90%,
+    #d8d101 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+
+  color: #fff;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cardsContainer {
+  font-family: "Calligraffitti", cursive;
 
   display: flex;
   flex-wrap: wrap;
@@ -464,12 +532,13 @@ a > img {
   filter: blur(2px);
 }
 
-.learnFrontCard, .learnBackCard {
-  color:#FF1493;
+.learnFrontCard,
+.learnBackCard {
+  color: #ff1493;
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid #FF1D58;
+  border: 1px solid #ff1d58;
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -488,12 +557,7 @@ a > img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    #FFC0CB,
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, #ffc0cb, transparent);
   transition: all 650ms;
 }
 

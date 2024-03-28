@@ -7,8 +7,8 @@ module.exports = function DeckPage({ login, cards, deck }) {
     <Layout login={login}>
       <h2 className="animate">{deck.name} </h2>
       <div className="homeHref">
-        <a href="/decks">
-          <h3>Вернуться к выбору категорий</h3>
+        <a href="/decks" className="backCategory">
+          Вернуться к выбору категорий
         </a>
       </div>
       <div className="cardsContainer">

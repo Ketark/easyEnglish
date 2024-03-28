@@ -32,7 +32,7 @@ addWordForm.addEventListener("submit", async (e) => {
       category.innerHTML = "";
       decks.forEach((deck) => {
         const string = document.createElement("div");
-        string.innerHTML = `${deck.name}: <progress max="100" value=${deck.done}></progress>`;
+        string.innerHTML = `<div class="categoryOne">${deck.name}: Выполнено на ${Math.round(deck.done)}%</div><progress max="100" value=${deck.done}></progress>`;
         string.setAttribute("key", deck.id);
         category.appendChild(string);
       });

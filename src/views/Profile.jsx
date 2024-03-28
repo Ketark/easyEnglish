@@ -15,7 +15,10 @@ module.exports = function Profile({ decks, progress, login }) {
           <div id="categories">
             {decks.map((deck) => (
               <div key={deck.id}>
-                {deck.name}: <progress max="100" value={deck.done}></progress>
+                <div className="categoryOne">{deck.name}: Выполнено на {Math.round(deck.done)}%</div>
+                <progress max="100" value={deck.done}></progress>
+                <div>{Math.round(deck.done)}</div>
+                <br/>
               </div>
             ))}
           </div>
