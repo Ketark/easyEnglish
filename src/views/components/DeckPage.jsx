@@ -17,14 +17,14 @@ module.exports = function DeckPage({ login, cards, deck }) {
             {card.result ? (
               <div className="flip-card-inner" style={{ transform: "none" }}>
                 <div className="flip-card-front blur">
-                  <h2>{card.enWord}</h2>
+                  <h1>{card.enWord}</h1>
                   <button className="learnFrontCard" id={card.id}>
                     Изучено
                   </button>
                 </div>
 
                 <div className="flip-card-back blur">
-                  <h2>{card.ruWord}</h2>
+                  <h1>{card.ruWord}</h1>
                   <button className="learnBackCard" id={card.id}>
                     Изучено
                   </button>
@@ -33,14 +33,14 @@ module.exports = function DeckPage({ login, cards, deck }) {
             ) : (
               <div className="flip-card-inner">
                 <div className="flip-card-front">
-                  <h2>{card.enWord}</h2>
+                  <h1>{card.enWord}</h1>
                   <button className="learnFrontCard" id={card.id}>
                     Изучено
                   </button>
                 </div>
 
                 <div className="flip-card-back">
-                  <h2>{card.ruWord}</h2>
+                  <h1>{card.ruWord}</h1>
                   <button className="learnBackCard" id={card.id}>
                     Изучено
                   </button>
