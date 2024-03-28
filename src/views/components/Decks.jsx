@@ -4,7 +4,7 @@ const Layout = require('../Layout');
 module.exports = function Decks({ login, decks }) {
 return(
     <Layout login={login}>
-        <h1>Категории</h1>
+        <h1 className='animate'>Категории</h1>
         <div className="deckContainer">
         {decks.map((deck) => 
         

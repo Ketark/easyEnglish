@@ -46,7 +46,6 @@ deckRouter.get("/:id", async (req, res) => {
         }
       }
     }
-    console.log(cards);
     const deck = await Deck.findOne({ where: { id: req.params.id } });
 
     renderTemplate(DeckPage, { login, cards, deck }, res);
