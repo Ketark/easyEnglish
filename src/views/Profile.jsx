@@ -4,6 +4,11 @@ const Layout = require("./Layout");
 module.exports = function Profile({ decks, progress, login }) {
   return (
     <Layout login={login}>
+      <div className="homeHref">
+        <a href="/decks">
+          <h3>Вернуться к выбору категорий</h3>
+        </a>
+      </div>
       <div className="profile-container">
         <div className="progress-section">
           <h1>Ваш прогресс в категориях:</h1>
