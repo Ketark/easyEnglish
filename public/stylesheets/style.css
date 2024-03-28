@@ -25,7 +25,7 @@
   
   .navbar .logo {
     text-decoration: none;
-    color: #FF69B4;
+    color: #FFC0CB;
     display: flex;
     align-items: center;
   }
@@ -38,7 +38,7 @@
   }
   
   .navbar .logo span {
-    color: #FF69B4;
+    color: #FFC0CB;
     font-size: 24px;
     font-weight: bold;
   }
@@ -55,7 +55,7 @@
   }
   
   .nav-links li a {
-    color: #FF69B4;
+    color: #FFC0CB;
     text-decoration: none;
     font-weight: bold;
   }
@@ -89,12 +89,6 @@
     background-color: #f9e46d; 
     border: 3px solid #000;
     margin-right: 20px;
-  }
-  
-  .navbar .nav-links a:hover {
-    background-color: #FF69B4; 
-    color: #FFF; 
-    border: 3px solid #000;
   }
 
   /* ЛОГИН + REG--------------------------------------------- */
@@ -149,15 +143,16 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #FF69B4;
-    color: #fff;
+    background-color: #f9e46d;
+    border: 3px solid #000;
+    color: #000;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .login-button:hover {
-    background-color: #FF1493;
+    background-color: #FFC0CB;
   }
   
   .logMsg {
@@ -165,7 +160,7 @@
   }
   
   .alog {
-    color: #FF69B4;
+    color: #FFC0CB;
     text-decoration: none;
   }
   
@@ -198,7 +193,7 @@
   
   .welcome-heading {
     font-size: 36px;
-    color: #FF69B4;
+    color: #000000;
   }
   
   .welcome-text {
@@ -215,8 +210,11 @@
   .welcome-button {
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #FF69B4;
-    color: white;
+    background-color: #f9e46d;
+    border: 3px solid #000;
+    color: #000;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
@@ -293,11 +291,16 @@
   
   #addWordForm button {
     padding: 10px 20px;
-    background-color: #FF69B4;
-    color: #FFF;
-    border: none;
+    background-color: #f9e46d;
+    border: 3px solid #000;
+    color: #000;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #addWordForm button:hover {
+    background-color: #FFC0CB;
   }
   
   #messageAddWord {
@@ -384,9 +387,10 @@ a>img{
 
 .learnFrontCard, .learnBackCard {
   color:#FF1493;
+  border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid #ff1d58;
+  border: 1px solid #FF1D58;
   position: relative;
   overflow: hidden;
   margin-top: 20px;
@@ -406,7 +410,7 @@ a>img{
   background: linear-gradient(
     120deg,
     transparent,
-    #ff1d58,
+    #FFC0CB,
     transparent
   );
   transition: all 650ms;
