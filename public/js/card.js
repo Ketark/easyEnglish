@@ -29,11 +29,24 @@ learnFrontCard.forEach((button) => {
 
 const learnBackCard = document.querySelectorAll(".learnBackCard");
 learnBackCard.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const { target } = event;
-    target.parentNode.classList.add("blur");
-    target.parentNode.parentNode.style = `
+  button.addEventListener("click", async (event) => {
+    try {
+      const { target } = event;
+      const response = await fetch(`/decks/card/${target.id}`, {
+        method: "POST",
+      });
+      const result = await response.json();
+      if (result.status) {
+        target.parentNode.classList.add("blur");
+        target.parentNode.parentNode.style = `
       transform: none;
       `;
+        target.parentNode.parentNode
+          .getElementsByClassName("flip-card-front")[0]
+          .classList.add("blur");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   });
 });

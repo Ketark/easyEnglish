@@ -21,18 +21,19 @@ addWordForm.addEventListener("submit", async (e) => {
     if (result.status) {
       message.innerText = "Карточка создана!";
       message.style.color = "green";
-      inputs.value = "";
+      document.querySelectorAll("input").forEach((el) => (el.value = ""));
+      document.querySelectorAll("select").forEach((el) => (el.value = ""));
+      console.log(inputs);
       const responsePut = await fetch("/profile/", {
         method: "PUT",
       });
       const decks = await responsePut.json();
-      console.log(decks);
       const category = document.getElementById("categories");
       category.innerHTML = "";
       decks.forEach((deck) => {
-        const string = document.createElement('div');
+        const string = document.createElement("div");
         string.innerHTML = `${deck.name}: <progress max="100" value=${deck.done}></progress>`;
-        string.setAttribute('key', deck.id);
+        string.setAttribute("key", deck.id);
         category.appendChild(string);
       });
     }

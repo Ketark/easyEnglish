@@ -59,12 +59,17 @@ deckRouter.post("/card/:id", async (req, res) => {
   try {
     const { userId } = req.session;
     const card = await Card.findOne({ where: { id: req.params.id } });
-    await Status.create({
-      user_id: userId,
-      card_id: card.id,
-      deck_id: card.deck_id,
+    const status = await Status.findOne({
+      where: { user_id: userId, card_id: card.id },
     });
-    res.json({ status: "success" });
+    if (!status) {
+      await Status.create({
+        user_id: userId,
+        card_id: card.id,
+        deck_id: card.deck_id,
+      });
+      res.json({ status: "success" });
+    }
   } catch (error) {
     console.log(error);
   }
